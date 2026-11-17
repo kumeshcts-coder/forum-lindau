@@ -1,0 +1,151 @@
+/* ==========================================================================
+   Forum Lindau – Responsive styles (all media queries)
+   Load AFTER style.css.
+   Breakpoints: 480 · 768 (tablet) · 1024 (desktop) · 1200 · 1280 · 1440
+   ========================================================================== */
+
+/* ---------- Tokens ---------- */
+@media (min-width: 768px) {
+  :root {
+    --gutter: 32px;
+    --fs-h1: 3.5rem;
+    --fs-h2: 2rem;
+    --fs-card-title: 1.375rem;
+    --section-space: 72px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --fs-body: 1.125rem;   /* 18px */
+    --fs-h1: 4.25rem;      /* 68px */
+    --fs-h2: 2.125rem;     /* 34px */
+    --fs-card-title: 1.5rem;
+    --fs-script: 3.25rem;
+    --header-h: 88px;
+    --gutter: 40px;
+    --section-space: 80px;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root { --fs-h1: 4.5rem; --fs-h2: 2.25rem; }
+}
+
+/* ---------- Header ---------- */
+@media (min-width: 1024px) {
+  .fl-logo img { width: 150px; }
+  .fl-nav { display: block; margin-left: auto; }
+  .fl-burger { display: none; }
+  .fl-nav__list { gap: 0; }
+  .fl-nav__link { white-space: nowrap; padding-inline: 12px; }
+}
+
+@media (min-width: 1200px) {
+  .fl-header__cta { display: inline-flex; white-space: nowrap; }
+  .fl-nav__list { gap: 8px; }
+  .fl-nav__link { padding-inline: 14px; }
+}
+
+/* ---------- Hero ---------- */
+@media (max-width: 479px) {
+  .fl-hero__actions .fl-btn { width: 100%; }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .fl-hero__media img { aspect-ratio: 4 / 3; object-position: 50% 58%; }
+}
+
+/* Desktop: text over image */
+@media (min-width: 1024px) {
+  .fl-hero { min-height: clamp(520px, 40vw, 640px); display: flex; align-items: center; color: var(--fl-white); overflow: hidden; }
+  .fl-br-desktop { display: inline; }
+  .fl-hero__media { position: absolute; inset: 0; }
+  .fl-hero__media img { height: 100%; aspect-ratio: auto; object-position: 50% 52%; }
+  .fl-hero__media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(8, 18, 12, 0.72) 0%, rgba(8, 18, 12, 0.5) 38%, rgba(8, 18, 12, 0.05) 70%);
+  }
+  .fl-hero__content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: calc(var(--container-max) + var(--gutter) * 2);
+    margin-inline: auto;
+    padding: 64px var(--gutter);
+  }
+  .fl-hero__title { color: var(--fl-white); margin-bottom: 20px; }
+  .fl-hero__lead { color: var(--fl-white); max-width: 30em; margin-bottom: 32px; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+  .fl-hero__actions .fl-btn--ghost { border-color: var(--fl-white); color: var(--fl-white); }
+  .fl-hero__actions .fl-btn--ghost:hover { background: var(--fl-white); color: var(--fl-text); }
+  .fl-hero__script {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: auto;
+    bottom: 56px;
+    right: max(var(--gutter), calc((100vw - var(--container-max)) / 2));
+    margin: 0;
+    font-family: var(--ff-script);
+    font-size: var(--fs-script);
+    font-weight: var(--fw-semibold);
+    line-height: 1;
+    color: var(--fl-white);
+    text-align: right;
+    transform: rotate(-10deg);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  }
+}
+
+/* ---------- Section 1: Featured event cards ---------- */
+@media (min-width: 1024px) { .fl-featured { padding-top: 0; margin-top: 16px; } }
+
+@media (min-width: 768px) { .fl-grid--3, .fl-grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+@media (min-width: 1024px) {
+  .fl-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .fl-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* ---------- Section 2: Compact events ---------- */
+/* Narrow 4-up columns (1024–1279): date on top, content below */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .fl-compact { flex-direction: column; gap: 12px; padding: 18px; }
+  .fl-compact__date { width: auto; padding: 0 0 12px; border-right: 0; border-bottom: 1px solid var(--fl-border); text-align: left; display: flex; align-items: baseline; gap: 8px; }
+  .fl-compact__mon, .fl-compact__year { margin-top: 0; }
+  .fl-compact:hover .fl-compact__date, .fl-compact:focus-within .fl-compact__date { border-color: rgba(255, 255, 255, 0.4); }
+}
+
+/* ---------- Section 3: About ---------- */
+@media (min-width: 768px) {
+  .fl-about__visual-wrap { display: grid; grid-template-columns: 1fr 220px; gap: 24px; align-items: end; }
+}
+
+@media (min-width: 1024px) {
+  .fl-about { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 48px; }
+  .fl-about__visual-wrap { grid-template-columns: minmax(0, 1fr) 200px; }
+  .fl-about__text p { max-width: 36em; }
+}
+
+/* ---------- Section 4: Articles ---------- */
+@media (min-width: 480px) and (max-width: 767px) {
+  .fl-article { grid-template-columns: 2fr 3fr; }
+  .fl-article__media img { aspect-ratio: auto; }
+}
+
+@media (min-width: 1280px) {
+  .fl-article { grid-template-columns: 2fr 3fr; }
+  .fl-article__media img { aspect-ratio: auto; min-height: 220px; }
+}
+
+/* ---------- Footer ---------- */
+@media (min-width: 768px) {
+  .fl-footer__main { grid-template-columns: auto 1fr 1fr; gap: 48px; align-items: start; }
+}
+
+/* ---------- Motion preference ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
