@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forum Lindau – Kulturverein der Gemeinde Lindau</title>
+  <meta name="description" content="Das Forum Lindau ist der Kulturverein der Gemeinde Lindau und organisiert kulturelle Anlässe, fördert das Vereinsleben und schafft Begegnungen in unserer Gemeinde.">
+  <meta name="theme-color" content="#15883e">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <link rel="preload" as="image" href="assets/img/hero-mobile.webp" fetchpriority="high">
+</head>
+<body>
+  <a class="visually-hidden-focusable" href="#main">Zum Inhalt springen</a>
+
+  <!-- ================= Header ================= -->
+  <header class="fl-header" id="top">
+    <div class="fl-container fl-header__inner">
+      <a class="fl-logo" href="index.html" aria-label="Forum Lindau – Startseite">
+        <img src="assets/img/logo.svg" alt="Forum Lindau" width="150" height="60">
+      </a>
+
+      <nav class="fl-nav" aria-label="Hauptnavigation">
+        <ul class="fl-nav__list">
+          <li><a class="fl-nav__link" href="index.html" aria-current="page">Programm</a></li>
+          <li><a class="fl-nav__link" href="verein.html">Verein</a></li>
+          <li><a class="fl-nav__link" href="mitmachen.html">Mitmachen</a></li>
+          <li><a class="fl-nav__link" href="ueber-uns.html">Über uns</a></li>
+          <li><a class="fl-nav__link" href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <a class="fl-btn fl-btn--primary fl-btn--sm fl-header__cta" href="veranstaltungen.html">
+        Programm ansehen <i class="bi bi-arrow-right" aria-hidden="true"></i>
+      </a>
+
+      <button class="fl-burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#fl-menu" aria-controls="fl-menu" aria-expanded="false">
+        Menü
+        <span class="fl-burger__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile / tablet menu overlay -->
+  <div class="offcanvas offcanvas-top fl-menu" tabindex="-1" id="fl-menu" aria-labelledby="fl-menu-title">
+    <div class="fl-menu__head">
+      <a class="fl-logo" href="index.html" aria-label="Forum Lindau – Startseite">
+        <img src="assets/img/logo.svg" alt="Forum Lindau" width="120" height="48">
+      </a>
+      <h2 class="visually-hidden" id="fl-menu-title">Menü</h2>
+      <button type="button" class="fl-menu__close" data-bs-dismiss="offcanvas">
+        Schliessen <i class="bi bi-x-lg" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="offcanvas-body fl-menu__body">
+      <nav aria-label="Hauptnavigation mobil">
+        <ul class="fl-menu__list">
+          <li><a class="fl-menu__link" href="index.html" aria-current="page">Programm <i class="bi bi-arrow-right" aria-hidden="true"></i></a></li>
+          <li><a class="fl-menu__link" href="verein.html">Verein <i class="bi bi-arrow-right" aria-hidden="true"></i></a></li>
+          <li><a class="fl-menu__link" href="mitmachen.html">Mitmachen <i class="bi bi-arrow-right" aria-hidden="true"></i></a></li>
+          <li><a class="fl-menu__link" href="ueber-uns.html">Über uns <i class="bi bi-arrow-right" aria-hidden="true"></i></a></li>
+          <li><a class="fl-menu__link" href="kontakt.html">Kontakt <i class="bi bi-arrow-right" aria-hidden="true"></i></a></li>
+        </ul>
+      </nav>
+      <a class="fl-btn fl-btn--primary" href="veranstaltungen.html">Programm ansehen <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+      <div class="fl-menu__contact">
+        <a href="mailto:info@forumlindau.ch"><i class="bi bi-envelope" aria-hidden="true"></i> info@forumlindau.ch</a><br>
+        <a href="tel:+41523451492"><i class="bi bi-telephone" aria-hidden="true"></i> +41 52 345 14 92</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- ================= Hero ================= -->
+    <section class="fl-hero" aria-labelledby="hero-title">
+      <figure class="fl-hero__media">
+        <!-- TODO: add desktop 3:1 export via <source media="(min-width:1024px)"> once supplied -->
+        <picture>
+          <img src="assets/img/hero-mobile.webp" width="2160" height="3240"
+               alt="Dorffest in Lindau: Menschen an Festtischen unter Sonnenschirmen vor der Kirche"
+               fetchpriority="high">
+        </picture>
+      </figure>
+      <p class="fl-hero__script" aria-hidden="true">Kultur<br>verbindet<br>Menschen.</p>
+      <div class="fl-hero__content">
+        <h1 class="fl-hero__title" id="hero-title">Kultur und <br class="fl-br-desktop">Begegnung <br class="fl-br-desktop">in Lindau<span class="fl-dot">.</span></h1>
+        <p class="fl-hero__lead">Das Forum Lindau ist der Kulturverein der Gemeinde Lindau und organisiert kulturelle Anlässe, fördert das Vereinsleben und schafft Begegnungen in unserer Gemeinde.</p>
+        <div class="fl-hero__actions">
+          <a class="fl-btn fl-btn--primary" href="veranstaltungen.html">Programm ansehen <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+          <a class="fl-btn fl-btn--ghost" href="ueber-uns.html">Mehr über uns</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 1 · Featured events ================= -->
+    <section class="fl-section fl-featured" aria-label="Kommende Veranstaltungen">
+      <div class="fl-container">
+        <ul class="fl-grid fl-grid--3">
+          <li>
+            <article class="fl-event">
+              <figure class="fl-event__media">
+                <img src="assets/img/events/reena-krishnaraja-kurkuma.jpg" width="1400" height="788" loading="lazy"
+                     alt="Reena Krishnaraja mit Mikrofon auf der Bühne">
+                <time class="fl-datebadge" datetime="2027-02-25">
+                  <span class="fl-datebadge__wd">Do</span><span class="fl-datebadge__day">25</span><span class="fl-datebadge__mon">Feb</span>
+                </time>
+              </figure>
+              <div class="fl-event__body">
+                <div class="fl-event__top">
+                  <div>
+                    <span class="fl-category">Comedy</span>
+                    <h3 class="fl-event__title"><a class="fl-stretched" href="veranstaltungen/reena-krishnaraja-kurkuma.html">Reena Krishnaraja – Kurkuma</a></h3>
+                  </div>
+                  <span class="fl-arrow-circle" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+                </div>
+                <p class="fl-event__teaser">Appenzeller Alltag, tamilische Wurzeln und das Durcheinander des Erwachsenwerdens: Reena Krishnaraja erzählt in «Kurkuma» mit Selbstironie von Gegensätzen.</p>
+                <ul class="fl-meta">
+                  <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span class="visually-hidden">Ort:</span> Bucksaal, Tagelswangen</li>
+                  <li><i class="bi bi-clock" aria-hidden="true"></i><span class="visually-hidden">Zeit:</span> Zeit folgt</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="fl-event">
+              <figure class="fl-event__media">
+                <img src="assets/img/events/babs-stehli-chalti-chuchi.jpg" width="1400" height="933" loading="lazy"
+                     alt="Babs Stehli als Rosmarie in der Dorfbeiz">
+                <time class="fl-datebadge" datetime="2027-04-08">
+                  <span class="fl-datebadge__wd">Do</span><span class="fl-datebadge__day">08</span><span class="fl-datebadge__mon">Apr</span>
+                </time>
+              </figure>
+              <div class="fl-event__body">
+                <div class="fl-event__top">
+                  <div>
+                    <span class="fl-category">Comedy und Theater</span>
+                    <h3 class="fl-event__title"><a class="fl-stretched" href="veranstaltungen/babs-stehli-chalti-chuchi.html">Babs Stehli – Chalti Chuchi</a></h3>
+                  </div>
+                  <span class="fl-arrow-circle" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+                </div>
+                <p class="fl-event__teaser">Rosmarie erklärt sich die Welt auf ihre Weise. Babs Stehli bringt die schlagfertige Figur aus einer Zürcher Oberländer Dorfbeiz mit ihrem ersten Solo auf die Bühne.</p>
+                <ul class="fl-meta">
+                  <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span class="visually-hidden">Ort:</span> Bucksaal, Tagelswangen</li>
+                  <li><i class="bi bi-clock" aria-hidden="true"></i><span class="visually-hidden">Zeit:</span> 20.00 Uhr</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="fl-event">
+              <figure class="fl-event__media">
+                <img src="assets/img/events/faehnlein-der-sieben-aufrechten.jpg" width="1400" height="1050" loading="lazy"
+                     alt="Produktionsmotiv mit Traktor und Fahne">
+                <time class="fl-datebadge" datetime="2027-05-27">
+                  <span class="fl-datebadge__wd">Do</span><span class="fl-datebadge__day">27</span><span class="fl-datebadge__mon">Mai</span>
+                </time>
+              </figure>
+              <div class="fl-event__body">
+                <div class="fl-event__top">
+                  <div>
+                    <span class="fl-category">Theater</span>
+                    <h3 class="fl-event__title"><a class="fl-stretched" href="veranstaltungen/faehnlein-der-sieben-aufrechten.html">Das Fähnlein der sieben Aufrechten</a></h3>
+                  </div>
+                  <span class="fl-arrow-circle" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+                </div>
+                <p class="fl-event__teaser">Sieben Freunde wollen am Schützenfest auftreten. Doch wer hält die Rede? Gottfried Kellers Geschichte unter freiem Himmel.</p>
+                <ul class="fl-meta">
+                  <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span class="visually-hidden">Ort:</span> Dorfplatz Lindau</li>
+                  <li><i class="bi bi-clock" aria-hidden="true"></i><span class="visually-hidden">Zeit:</span> Zeit folgt</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= 2 · Nächste Veranstaltungen ================= -->
+    <section class="fl-section" aria-labelledby="next-title">
+      <div class="fl-container">
+        <div class="fl-section__head">
+          <h2 class="fl-section__title" id="next-title">Nächste Veranstaltungen</h2>
+          <a class="fl-link-arrow" href="veranstaltungen.html">Zum gesamten Programm <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <ul class="fl-grid fl-grid--4">
+          <li>
+            <article class="fl-compact">
+              <time class="fl-compact__date" datetime="2027-09-23"><span class="fl-compact__day">23</span><span class="fl-compact__mon">Sep</span><span class="fl-compact__year">2027</span></time>
+              <div class="fl-compact__body">
+                <div class="fl-compact__top">
+                  <h3 class="fl-compact__title"><a class="fl-stretched" href="veranstaltungen/die-turing-maschine.html">Die Turing-Maschine</a></h3>
+                  <span class="fl-arrow-circle" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+                </div>
+                <p class="fl-compact__teaser">Alan Turing entschlüsselt geheime Botschaften und wird selbst zum Verfolgten. Ein Theaterabend über den Menschen hinter den Berechnungen.</p>
+                <ul class="fl-meta">
+                  <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span class="visually-hidden">Ort:</span> Bucksaal, Tagelswangen</li>
+                  <li><i class="bi bi-clock" aria-hidden="true"></i><span class="visually-hidden">Zeit:</span> 20.00 Uhr</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="fl-compact">
+              <time class="fl-compact__date" datetime="2027-11-04"><span class="fl-compact__day">04</span><span class="fl-compact__mon">Nov</span><span class="fl-compact__year">2027</span></time>
+              <div class="fl-compact__body">
+                <div class="fl-compact__top">
+                  <h3 class="fl-compact__title"><a class="fl-stretched" href="veranstaltungen/julia-steiner.html">Julia Steiner</a></h3>
+                  <span class="fl-arrow-circle" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+                </div>
+                <p class="fl-compact__teaser">Die Comedienne und Slam-Poetin erzählt mit Sprachwitz und Selbstironie; 2024 gewann sie den Preis «SRF 3 Best Talent Comedy».</p>
+                <ul class="fl-meta">
+                  <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span class="visually-hidden">Ort:</span> Bucksaal, Tagelswangen</li>
+                  <li><i class="bi bi-clock" aria-hidden="true"></i><span class="visually-hidden">Zeit:</span> 20.00 Uhr</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="fl-compact">
+              <time class="fl-compact__date" datetime="2027-12-05"><span class="fl-compact__day">05</span><span class="fl-compact__mon">Dez</span><span class="fl-compact__year">2027</span></time>
+              <div class="fl-compact__body">
+                <div class="fl-compact__top">
+                  <h3 class="fl-compact__title"><a class="fl-stretched" href="veranstaltungen/vocabular-2027.html">Vocabular</a></h3>
+                  <span class="fl-arrow-circle" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+                </div>
+                <p class="fl-compact__teaser">Sechs Stimmen, Beatbox und eigene Mundart-Songs: A-cappella-Pop aus Luzern, mit Witz und überraschenden Arrangements.</p>
+                <ul class="fl-meta">
+                  <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span class="visually-hidden">Ort:</span> Bucksaal, Tagelswangen</li>
+                  <li><i class="bi bi-clock" aria-hidden="true"></i><span class="visually-hidden">Zeit:</span> 18.00 Uhr</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="fl-compact">
+              <time class="fl-compact__date" datetime="2028-02-24"><span class="fl-compact__day">24</span><span class="fl-compact__mon">Feb</span><span class="fl-compact__year">2028</span></time>
+              <div class="fl-compact__body">
+                <div class="fl-compact__top">
+                  <h3 class="fl-compact__title"><a class="fl-stretched" href="veranstaltungen/chaeller.html">Chäller</a></h3>
+                  <span class="fl-arrow-circle" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+                </div>
+                <p class="fl-compact__teaser">Der Schaffhauser Comedian macht aus alltäglichen Gesprächen überraschende Komik – bekannt für Scherzanrufe, Figuren und Dialekte.</p>
+                <ul class="fl-meta">
+                  <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span class="visually-hidden">Ort:</span> Bucksaal, Tagelswangen</li>
+                  <li><i class="bi bi-clock" aria-hidden="true"></i><span class="visually-hidden">Zeit:</span> Zeit folgt</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= 3 · Über das Forum Lindau ================= -->
+    <section class="fl-section" aria-labelledby="about-title">
+      <div class="fl-container fl-about">
+        <div class="fl-about__text">
+          <h2 class="fl-section__title" id="about-title">Über das Forum Lindau</h2>
+          <p>Das Forum Lindau ist der Kulturverein der Gemeinde Lindau. Wir setzen uns für ein lebendiges kulturelles Leben in unserer Gemeinde ein, unterstützen das Vereinsleben und schaffen Begegnungsmöglichkeiten für alle Generationen. Mit Konzerten, Lesungen, Ausstellungen, Führungen und weiteren Anlässen tragen wir zu einem aktiven und vielfältigen Gemeindeleben bei.</p>
+          <a class="fl-btn fl-btn--outline fl-btn--sm" href="ueber-uns.html">Mehr über uns <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="fl-about__visual-wrap">
+          <figure class="fl-about__visual m-0">
+            <!-- PLACEHOLDER image: replace with approved village/landscape photo -->
+            <img class="fl-about__img" src="assets/img/hero-mobile.webp" width="2160" height="3240" loading="lazy"
+                 alt="Die Kirche von Lindau mit Bäumen im Sommer">
+          </figure>
+          <div class="fl-about__aside">
+            <p class="fl-about__script" aria-hidden="true">Kultur lebendig<br>in unserer<br>Gemeinde.</p>
+            <p class="fl-support">
+              <img src="assets/img/gemeinde-wappen.svg" alt="Wappen der Gemeinde Lindau" width="40" height="48">
+              <span>Mit Unterstützung der Gemeinde Lindau</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4 · Einblicke ================= -->
+    <!-- PLACEHOLDER content: article copy/images from the mockup, not approved content -->
+    <section class="fl-section" aria-labelledby="insights-title">
+      <div class="fl-container">
+        <div class="fl-section__head">
+          <h2 class="fl-section__title" id="insights-title">Einblicke ins Forum Lindau</h2>
+          <a class="fl-link-arrow" href="einblicke.html">Alle Beiträge ansehen <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <ul class="fl-grid fl-grid--3">
+          <li>
+            <article class="fl-article">
+              <figure class="fl-article__media m-0"><img src="assets/img/events/die-turing-maschine.jpg" width="1400" height="934" loading="lazy" alt="Szene aus einem Theaterabend"></figure>
+              <div class="fl-article__body">
+                <span class="fl-pill">Rückblicke</span>
+                <h3 class="fl-article__title"><a class="fl-stretched" href="einblicke/ein-vielfaeltiges-kulturjahr.html">Ein vielfältiges Kulturjahr</a></h3>
+                <p class="fl-article__teaser">Impressionen von Konzerten, Lesungen und Ausstellungen in unserer Gemeinde.</p>
+                <span class="fl-arrow-circle" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="fl-article">
+              <figure class="fl-article__media m-0"><img src="assets/img/hero-mobile.webp" width="2160" height="3240" loading="lazy" alt="Menschen am Dorffest in Lindau" style="object-position:50% 85%"></figure>
+              <div class="fl-article__body">
+                <span class="fl-pill">Engagement</span>
+                <h3 class="fl-article__title"><a class="fl-stretched" href="einblicke/gemeinsam-etwas-bewegen.html">Gemeinsam etwas bewegen</a></h3>
+                <p class="fl-article__teaser">Viele Freiwillige machen unsere Anlässe möglich. Mach auch mit!</p>
+                <span class="fl-arrow-circle" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="fl-article">
+              <figure class="fl-article__media m-0"><img src="assets/img/events/vocabular.jpg" width="1400" height="934" loading="lazy" alt="Gruppenbild von Mitwirkenden"></figure>
+              <div class="fl-article__body">
+                <span class="fl-pill">Im Gespräch</span>
+                <h3 class="fl-article__title"><a class="fl-stretched" href="einblicke/kultur-staerkt-unsere-gemeinde.html">«Kultur stärkt unsere Gemeinde»</a></h3>
+                <p class="fl-article__teaser">Ein Gespräch mit einem Vorstandsmitglied des Forum Lindau über Motivation und Visionen.</p>
+                <span class="fl-arrow-circle" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="fl-footer">
+    <div class="fl-container">
+      <div class="fl-footer__main">
+        <a class="fl-footer__logo" href="index.html" aria-label="Forum Lindau – Startseite">
+          <img src="assets/img/logo.svg" alt="Forum Lindau" width="140" height="56">
+        </a>
+        <div>
+          <h2 class="fl-footer__title">Kontakt</h2>
+          <address>
+            Forum Lindau<br>
+            Kulturverein der Gemeinde Lindau<br>
+            8315 Lindau
+          </address>
+        </div>
+        <ul class="fl-footer__contact">
+          <li><a href="mailto:info@forumlindau.ch"><i class="bi bi-envelope" aria-hidden="true"></i> info@forumlindau.ch</a></li>
+          <li><a href="tel:+41523451492"><i class="bi bi-telephone" aria-hidden="true"></i> +41 52 345 14 92</a></li>
+        </ul>
+      </div>
+      <div class="fl-footer__bottom">
+        <p class="m-0">© 2026 Forum Lindau · Kulturverein der Gemeinde Lindau</p>
+        <ul class="fl-footer__legal">
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="barrierefreiheit.html">Barrierefreiheit</a></li>
+        </ul>
+        <!-- TODO: confirm agreed Loewenmut credit wording and URL -->
+        <p class="fl-footer__credit m-0"><a href="https://www.loewenmut.ch" target="_blank" rel="noopener">Website by Loewenmut</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
