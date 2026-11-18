@@ -12,8 +12,10 @@
 
 
   <!-- Hero image (LCP): start downloading immediately -->
-  <link rel="preload" as="image" fetchpriority="high" media="(max-width: 1023.98px)"
-        imagesrcset="assets/img/hero-m-480.webp 480w, assets/img/hero-m-720.webp 720w, assets/img/hero-m-960.webp 960w, assets/img/hero-m-1440.webp 1440w" imagesizes="100vw">
+  <link rel="preload" as="image" fetchpriority="high" media="(max-width: 767.98px)"
+        imagesrcset="assets/img/hero-m-480.webp 480w, assets/img/hero-m-720.webp 720w" imagesizes="100vw">
+  <link rel="preload" as="image" fetchpriority="high" media="(min-width: 768px) and (max-width: 1023.98px)"
+        imagesrcset="assets/img/hero-m-960.webp 960w, assets/img/hero-m-1440.webp 1440w" imagesizes="100vw">
   <link rel="preload" as="image" fetchpriority="high" media="(min-width: 1024px)"
         imagesrcset="assets/img/hero-d-1280.webp 1280w, assets/img/hero-d-1920.webp 1920w, assets/img/hero-d-2560.webp 2560w" imagesizes="100vw">
   <link rel="preload" href="assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -90,7 +92,8 @@
       <figure class="fl-hero__media">
         <picture>
           <source media="(min-width: 1024px)" srcset="assets/img/hero-d-1280.webp 1280w, assets/img/hero-d-1920.webp 1920w, assets/img/hero-d-2560.webp 2560w" sizes="100vw" width="2560" height="1280">
-          <img src="assets/img/hero-m-720.webp" srcset="assets/img/hero-m-480.webp 480w, assets/img/hero-m-720.webp 720w, assets/img/hero-m-960.webp 960w, assets/img/hero-m-1440.webp 1440w" sizes="100vw" width="1440" height="1800"
+          <source media="(min-width: 768px)" srcset="assets/img/hero-m-960.webp 960w, assets/img/hero-m-1440.webp 1440w" sizes="100vw" width="1440" height="1800">
+          <img src="assets/img/hero-m-720.webp" srcset="assets/img/hero-m-480.webp 480w, assets/img/hero-m-720.webp 720w" sizes="100vw" width="720" height="900"
                alt="Dorffest in Lindau: Menschen an Festtischen unter Sonnenschirmen vor der Kirche"
                fetchpriority="high" decoding="async">
         </picture>
@@ -118,7 +121,7 @@ Menschen.</p>
           <li>
             <article class="fl-event">
               <figure class="fl-event__media">
-                <img src="assets/img/events/card-reena-600.webp" srcset="assets/img/events/card-reena-400.webp 400w, assets/img/events/card-reena-600.webp 600w, assets/img/events/card-reena-1200.webp 1200w" sizes="(min-width: 1024px) 31vw, (min-width: 768px) 48vw, 100vw" width="1200" height="694" decoding="async" loading="lazy" style="object-position: 50% 50%"
+                <img src="assets/img/events/card-reena-600.webp" srcset="assets/img/events/card-reena-400.webp 400w, assets/img/events/card-reena-600.webp 600w, assets/img/events/card-reena-1200.webp 1200w" sizes="(min-width: 1024px) 31vw, (min-width: 768px) 48vw, 55vw" width="1200" height="694" decoding="async" loading="lazy" style="object-position: 50% 50%"
                      alt="Reena Krishnaraja mit Mikrofon auf der Bühne">
                 <time class="fl-datebadge" datetime="2027-02-25">
                   <span class="fl-datebadge__wd">Do</span><span class="fl-datebadge__day">25</span><span class="fl-datebadge__mon">Feb</span>
@@ -141,7 +144,7 @@ Menschen.</p>
           <li>
             <article class="fl-event">
               <figure class="fl-event__media">
-                <img src="assets/img/events/card-babs-600.webp" srcset="assets/img/events/card-babs-400.webp 400w, assets/img/events/card-babs-600.webp 600w, assets/img/events/card-babs-1200.webp 1200w" sizes="(min-width: 1024px) 31vw, (min-width: 768px) 48vw, 100vw" width="1200" height="800" decoding="async" loading="lazy"
+                <img src="assets/img/events/card-babs-600.webp" srcset="assets/img/events/card-babs-400.webp 400w, assets/img/events/card-babs-600.webp 600w, assets/img/events/card-babs-1200.webp 1200w" sizes="(min-width: 1024px) 31vw, (min-width: 768px) 48vw, 55vw" width="1200" height="800" decoding="async" loading="lazy"
                      alt="Babs Stehli als Rosmarie in der Dorfbeiz">
                 <time class="fl-datebadge" datetime="2027-04-08">
                   <span class="fl-datebadge__wd">Do</span><span class="fl-datebadge__day">08</span><span class="fl-datebadge__mon">Apr</span>
@@ -164,7 +167,7 @@ Menschen.</p>
           <li>
             <article class="fl-event">
               <figure class="fl-event__media">
-                <img src="assets/img/events/card-faehnlein-600.webp" srcset="assets/img/events/card-faehnlein-400.webp 400w, assets/img/events/card-faehnlein-600.webp 600w, assets/img/events/card-faehnlein-1200.webp 1200w" sizes="(min-width: 1024px) 31vw, (min-width: 768px) 48vw, 100vw" width="1200" height="900" decoding="async" loading="lazy" style="object-position: 50% 72%"
+                <img src="assets/img/events/card-faehnlein-600.webp" srcset="assets/img/events/card-faehnlein-400.webp 400w, assets/img/events/card-faehnlein-600.webp 600w, assets/img/events/card-faehnlein-1200.webp 1200w" sizes="(min-width: 1024px) 31vw, (min-width: 768px) 48vw, 55vw" width="1200" height="900" decoding="async" loading="lazy" style="object-position: 50% 72%"
                      alt="Produktionsmotiv mit Traktor und Schweizer Fahne">
                 <time class="fl-datebadge" datetime="2027-05-27">
                   <span class="fl-datebadge__wd">Do</span><span class="fl-datebadge__day">27</span><span class="fl-datebadge__mon">Mai</span>
@@ -278,7 +281,7 @@ Menschen.</p>
         </div>
         <div class="fl-about__visual-wrap">
           <figure class="m-0">
-            <img class="fl-about__img" src="assets/img/about-lindau-700.webp" srcset="assets/img/about-lindau-700.webp 700w, assets/img/about-lindau-1400.webp 1400w" sizes="(min-width: 1024px) 37vw, 100vw" width="1400" height="933" decoding="async" loading="lazy"
+            <img class="fl-about__img" src="assets/img/about-lindau-700.webp" srcset="assets/img/about-lindau-700.webp 700w, assets/img/about-lindau-1400.webp 1400w" sizes="(min-width: 1024px) 37vw, 60vw" width="1400" height="933" decoding="async" loading="lazy"
                  alt="Luftbild von Lindau mit Kirche, Häusern und Wiesen">
           </figure>
           <div class="fl-about__aside">
@@ -305,7 +308,7 @@ in unserer
         <ul class="fl-grid fl-grid--articles">
           <li>
             <article class="fl-article">
-              <figure class="fl-article__media"><img src="assets/img/article-kulturjahr-300.webp" srcset="assets/img/article-kulturjahr-300.webp 300w, assets/img/article-kulturjahr-600.webp 600w" sizes="(min-width: 1280px) 15vw, (min-width: 1024px) 31vw, (min-width: 480px) 48vw, 100vw" width="600" height="498" decoding="async" loading="lazy" alt="Besucherinnen und Besucher in einer Kunstausstellung"></figure>
+              <figure class="fl-article__media"><img src="assets/img/article-kulturjahr-300.webp" srcset="assets/img/article-kulturjahr-300.webp 300w, assets/img/article-kulturjahr-600.webp 600w" sizes="(min-width: 1280px) 15vw, (min-width: 1024px) 31vw, (min-width: 480px) 48vw, 55vw" width="600" height="498" decoding="async" loading="lazy" alt="Besucherinnen und Besucher in einer Kunstausstellung"></figure>
               <div class="fl-article__body">
                 <span class="fl-pill">Rückblicke</span>
                 <h3 class="fl-article__title"><a class="fl-stretched" href="einblicke/ein-vielfaeltiges-kulturjahr.html">Ein vielfältiges Kulturjahr</a></h3>
@@ -316,7 +319,7 @@ in unserer
           </li>
           <li>
             <article class="fl-article">
-              <figure class="fl-article__media"><img src="assets/img/article-engagement-300.webp" srcset="assets/img/article-engagement-300.webp 300w, assets/img/article-engagement-600.webp 600w" sizes="(min-width: 1280px) 15vw, (min-width: 1024px) 31vw, (min-width: 480px) 48vw, 100vw" width="600" height="564" decoding="async" loading="lazy" alt="Kinder malen gemeinsam an einem Tisch"></figure>
+              <figure class="fl-article__media"><img src="assets/img/article-engagement-300.webp" srcset="assets/img/article-engagement-300.webp 300w, assets/img/article-engagement-600.webp 600w" sizes="(min-width: 1280px) 15vw, (min-width: 1024px) 31vw, (min-width: 480px) 48vw, 55vw" width="600" height="564" decoding="async" loading="lazy" alt="Kinder malen gemeinsam an einem Tisch"></figure>
               <div class="fl-article__body">
                 <span class="fl-pill">Engagement</span>
                 <h3 class="fl-article__title"><a class="fl-stretched" href="einblicke/gemeinsam-etwas-bewegen.html">Gemeinsam etwas bewegen</a></h3>
@@ -327,7 +330,7 @@ in unserer
           </li>
           <li>
             <article class="fl-article">
-              <figure class="fl-article__media"><img src="assets/img/article-gespraech-300.webp" srcset="assets/img/article-gespraech-300.webp 300w, assets/img/article-gespraech-600.webp 600w" sizes="(min-width: 1280px) 15vw, (min-width: 1024px) 31vw, (min-width: 480px) 48vw, 100vw" width="600" height="529" decoding="async" loading="lazy" alt="Lächelnde Frau im Gespräch"></figure>
+              <figure class="fl-article__media"><img src="assets/img/article-gespraech-300.webp" srcset="assets/img/article-gespraech-300.webp 300w, assets/img/article-gespraech-600.webp 600w" sizes="(min-width: 1280px) 15vw, (min-width: 1024px) 31vw, (min-width: 480px) 48vw, 55vw" width="600" height="529" decoding="async" loading="lazy" alt="Lächelnde Frau im Gespräch"></figure>
               <div class="fl-article__body">
                 <span class="fl-pill">Im Gespräch</span>
                 <h3 class="fl-article__title"><a class="fl-stretched" href="einblicke/kultur-staerkt-unsere-gemeinde.html">«Kultur stärkt unsere Gemeinde»</a></h3>
