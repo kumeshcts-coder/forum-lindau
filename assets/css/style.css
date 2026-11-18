@@ -128,21 +128,6 @@ img { max-width: 100%; height: auto; }
   border-radius: 4px;
 }
 
-/* Skip link: off-screen for mouse users and on page load; slides in only on keyboard focus (Tab) */
-.fl-skip {
-  position: fixed;
-  top: 8px;
-  left: 8px;
-  z-index: 2000;
-  padding: 12px 20px;
-  border-radius: 8px;
-  background: var(--fl-green);
-  color: var(--fl-white);
-  font-weight: var(--fw-semibold);
-  text-decoration: none;
-  transform: translateY(-200%);
-}
-.fl-skip:focus-visible { transform: none; color: var(--fl-white); }
 
 .fl-container {
   width: 100%;
