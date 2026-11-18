@@ -40,9 +40,9 @@
   .fl-hero { display: flex; align-items: center; min-height: 52.24vw; max-height: 1003px; }
   .fl-hero__media { position: absolute; inset: 0; }
   .fl-hero__media img { height: 100%; aspect-ratio: auto; object-position: 50% 50%; }
-  .fl-hero__ellipse { display: block; position: absolute; z-index: 1; max-width: none; height: auto; pointer-events: none; }
-  .fl-hero__ellipse--left { left: -31.15%; top: -35.79%; width: 103.85%; }
-  .fl-hero__ellipse--right { left: 56.98%; top: -19.44%; width: 64.69%; }
+  .fl-hero__ellipse { display: block; position: absolute; z-index: 1; pointer-events: none; background: no-repeat center / 100% 100%; }
+  .fl-hero__ellipse--left { left: -31.15%; top: -35.79%; width: 103.85%; aspect-ratio: 1994 / 1784; background-image: url("../img/icons/hero-ellipse-left.svg"); }
+  .fl-hero__ellipse--right { left: 56.98%; top: -19.44%; width: 64.69%; aspect-ratio: 1242 / 1086; background-image: url("../img/icons/hero-ellipse-right.svg"); }
   .fl-hero__content { width: 100%; max-width: calc(var(--container-max) + var(--gutter) * 2); margin-inline: auto; padding: 0 var(--gutter); transform: translateY(-1.15%); }
   .fl-hero__title { max-width: 7.06em; margin-bottom: 0.19em; color: var(--fl-white); }
   .fl-br-desktop { display: inline; }

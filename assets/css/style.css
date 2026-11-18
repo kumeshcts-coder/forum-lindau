@@ -7,10 +7,20 @@
    Layout changes per breakpoint live in responsive.css.
    ========================================================================== */
 
+/* ---- Self-hosted fonts (Latin subset) ---- */
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 300; font-display: swap; src: url("../fonts/poppins-300.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/poppins-400.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 600; font-display: swap; src: url("../fonts/poppins-600.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 700; font-display: swap; src: url("../fonts/poppins-700.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 800; font-display: swap; src: url("../fonts/poppins-800.woff2") format("woff2"); }
+/* Script font (subset to the letters used on this page); "block" so the much wider fallback script font is never shown */
+@font-face { font-family: "Vujahday Script"; font-style: normal; font-weight: 400; font-display: block; src: url("../fonts/vujahday-script.woff2") format("woff2"); }
+
 :root {
   /* ---- Colours (Figma) ---- */
-  --fl-green: #009748;
-  --fl-green-dark: #007a3a;
+  --fl-green-brand: #009748;   /* logo green (Figma) – icons and decoration */
+  --fl-green: #007d3c;         /* accessible text/button green: 5.2:1 on white (WCAG AA) */
+  --fl-green-dark: #00632f;
   --fl-green-tint: rgba(0, 151, 72, 0.1);
   --fl-heading: #243232;
   --fl-text: #373737;
@@ -27,7 +37,6 @@
   /* ---- Font families ---- */
   --ff-base: "Poppins", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
   --ff-script: "Vujahday Script", "Segoe Script", cursive;
-  --ff-alt: "Manrope", "Poppins", sans-serif;
 
   /* ---- Font weights ---- */
   --fw-light: 300;
@@ -200,7 +209,6 @@ img { max-width: 100%; height: auto; }
   background: transparent;
   border-color: var(--fl-green);
   color: var(--fl-green);
-  font-family: var(--ff-alt);
 }
 .fl-btn--outline:hover { background: var(--fl-green-tint); color: var(--fl-green); }
 
@@ -229,6 +237,7 @@ img { max-width: 100%; height: auto; }
   background: var(--fl-white);
   transition: box-shadow 0.2s ease;
 }
+.fl-scroll-marker { position: absolute; top: 0; left: 0; width: 1px; height: 5px; pointer-events: none; }
 .fl-header.is-scrolled { box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); }
 
 .fl-header__inner {
@@ -317,7 +326,7 @@ img { max-width: 100%; height: auto; }
   font-weight: var(--fw-semibold);
   color: var(--fl-heading);
 }
-.fl-menu__close .bi { font-size: 1.75rem; line-height: 1; }
+.fl-menu__x { flex: none; width: 24px; height: 24px; }
 .fl-menu__body { display: flex; flex-direction: column; gap: 32px; padding: 24px var(--gutter) 40px; }
 .fl-menu__list { margin: 0; padding: 0; list-style: none; }
 .fl-menu__list li + li { border-top: 1px solid var(--fl-border); }
@@ -332,7 +341,7 @@ img { max-width: 100%; height: auto; }
   color: var(--fl-heading);
   text-decoration: none;
 }
-.fl-menu__link .bi { font-size: 1.5rem; color: var(--fl-green); }
+.fl-menu__link .fl-arrow { width: 20px; height: 20px; }
 .fl-menu__link:hover, .fl-menu__link[aria-current="page"] { color: var(--fl-green); }
 .fl-menu__btn { width: 100%; }
 .fl-menu__contact { display: flex; flex-direction: column; font-size: 18px; color: var(--fl-p); }
@@ -483,7 +492,7 @@ img { max-width: 100%; height: auto; }
 .fl-compact__divider { flex: none; width: 1px; background: var(--fl-border); }
 .fl-compact__body { display: flex; flex: 1; flex-direction: column; min-width: 0; }
 .fl-compact__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
-.fl-compact__title { font-size: var(--fs-compact-title); font-weight: var(--fw-bold); line-height: 1.337; color: var(--fl-heading); overflow-wrap: break-word; hyphens: auto; }
+.fl-compact__title { font-size: var(--fs-compact-title); font-weight: var(--fw-bold); line-height: 1.337; color: var(--fl-heading); overflow-wrap: break-word; }
 .fl-compact__head .fl-circle { margin-top: clamp(4px, 0.47vw, 9px); }
 .fl-compact__teaser {
   margin-top: 12px;

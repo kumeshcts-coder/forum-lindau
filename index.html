@@ -11,17 +11,21 @@
   <link rel="icon" type="image/png" href="assets/img/favicon/Fav-icon.png">
 
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <!-- Script font: display=block so the wide fallback script font is never shown -->
-  <link href="https://fonts.googleapis.com/css2?family=Vujahday+Script&display=block" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Hero image (LCP): start downloading immediately -->
+  <link rel="preload" as="image" fetchpriority="high" media="(max-width: 1023.98px)"
+        imagesrcset="assets/img/hero-m-480.webp 480w, assets/img/hero-m-720.webp 720w, assets/img/hero-m-960.webp 960w, assets/img/hero-m-1440.webp 1440w" imagesizes="100vw">
+  <link rel="preload" as="image" fetchpriority="high" media="(min-width: 1024px)"
+        imagesrcset="assets/img/hero-d-1280.webp 1280w, assets/img/hero-d-1920.webp 1920w, assets/img/hero-d-2560.webp 2560w" imagesizes="100vw">
+  <link rel="preload" href="assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/poppins-800.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Self-hosted: Bootstrap 5.3.3 (only the parts this page uses), fonts in style.css -->
+  <link href="assets/vendor/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/responsive.css" rel="stylesheet">
 </head>
 <body>
+  <div class="fl-scroll-marker" aria-hidden="true"></div>
 
   <!-- ================= Header ================= -->
   <header class="fl-header" id="top">
@@ -59,17 +63,17 @@
       </a>
       <h2 class="visually-hidden" id="fl-menu-title">Menü</h2>
       <button type="button" class="fl-menu__close" data-bs-dismiss="offcanvas">
-        Schliessen <i class="bi bi-x-lg" aria-hidden="true"></i>
+        Schliessen <svg class="fl-menu__x" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       </button>
     </div>
     <div class="offcanvas-body fl-menu__body">
       <nav aria-label="Hauptnavigation mobil">
         <ul class="fl-menu__list">
-          <li><a class="fl-menu__link" href="index.html" aria-current="page">Programm <i class="bi bi-arrow-right" aria-hidden="true"></i></a></li>
-          <li><a class="fl-menu__link" href="verein.html">Verein <i class="bi bi-arrow-right" aria-hidden="true"></i></a></li>
-          <li><a class="fl-menu__link" href="mitmachen.html">Mitmachen <i class="bi bi-arrow-right" aria-hidden="true"></i></a></li>
-          <li><a class="fl-menu__link" href="ueber-uns.html">Über uns <i class="bi bi-arrow-right" aria-hidden="true"></i></a></li>
-          <li><a class="fl-menu__link" href="kontakt.html">Kontakt <i class="bi bi-arrow-right" aria-hidden="true"></i></a></li>
+          <li><a class="fl-menu__link" href="index.html" aria-current="page">Programm <img class="fl-arrow" src="assets/img/icons/arrow-green.svg" alt="" width="18" height="18"></a></li>
+          <li><a class="fl-menu__link" href="verein.html">Verein <img class="fl-arrow" src="assets/img/icons/arrow-green.svg" alt="" width="18" height="18"></a></li>
+          <li><a class="fl-menu__link" href="mitmachen.html">Mitmachen <img class="fl-arrow" src="assets/img/icons/arrow-green.svg" alt="" width="18" height="18"></a></li>
+          <li><a class="fl-menu__link" href="ueber-uns.html">Über uns <img class="fl-arrow" src="assets/img/icons/arrow-green.svg" alt="" width="18" height="18"></a></li>
+          <li><a class="fl-menu__link" href="kontakt.html">Kontakt <img class="fl-arrow" src="assets/img/icons/arrow-green.svg" alt="" width="18" height="18"></a></li>
         </ul>
       </nav>
       <a class="fl-btn fl-btn--primary fl-menu__btn" href="veranstaltungen.html">Programm ansehen <img class="fl-arrow" src="assets/img/icons/arrow-white.svg" alt="" width="18" height="18"></a>
@@ -85,14 +89,14 @@
     <section class="fl-hero" aria-labelledby="hero-title">
       <figure class="fl-hero__media">
         <picture>
-          <source media="(min-width: 1024px)" srcset="assets/img/hero-desktop-1440.jpg 1440w, assets/img/hero-desktop.jpg 2560w" sizes="100vw">
-          <img src="assets/img/hero-mobile.webp" width="2160" height="3240"
+          <source media="(min-width: 1024px)" srcset="assets/img/hero-d-1280.webp 1280w, assets/img/hero-d-1920.webp 1920w, assets/img/hero-d-2560.webp 2560w" sizes="100vw" width="2560" height="1280">
+          <img src="assets/img/hero-m-720.webp" srcset="assets/img/hero-m-480.webp 480w, assets/img/hero-m-720.webp 720w, assets/img/hero-m-960.webp 960w, assets/img/hero-m-1440.webp 1440w" sizes="100vw" width="1440" height="1800"
                alt="Dorffest in Lindau: Menschen an Festtischen unter Sonnenschirmen vor der Kirche"
-               fetchpriority="high">
+               fetchpriority="high" decoding="async">
         </picture>
       </figure>
-      <img class="fl-hero__ellipse fl-hero__ellipse--left" src="assets/img/icons/hero-ellipse-left.svg" alt="" width="1994" height="1784">
-      <img class="fl-hero__ellipse fl-hero__ellipse--right" src="assets/img/icons/hero-ellipse-right.svg" alt="" width="1242" height="1086">
+      <span class="fl-hero__ellipse fl-hero__ellipse--left" aria-hidden="true"></span>
+      <span class="fl-hero__ellipse fl-hero__ellipse--right" aria-hidden="true"></span>
       <p class="fl-hero__script" aria-hidden="true">Kultur
 verbindet
 Menschen.</p>
@@ -107,13 +111,14 @@ Menschen.</p>
     </section>
 
     <!-- ================= 1 · Featured events ================= -->
-    <section class="fl-section" aria-label="Kommende Veranstaltungen">
+    <section class="fl-section" aria-labelledby="featured-title">
       <div class="fl-container">
+        <h2 class="visually-hidden" id="featured-title">Kommende Veranstaltungen</h2>
         <ul class="fl-grid fl-grid--featured">
           <li>
             <article class="fl-event">
               <figure class="fl-event__media">
-                <img src="assets/img/events/card-reena.jpg" width="1200" height="694" loading="lazy" style="object-position: 50% 50%"
+                <img src="assets/img/events/card-reena-600.webp" srcset="assets/img/events/card-reena-400.webp 400w, assets/img/events/card-reena-600.webp 600w, assets/img/events/card-reena-1200.webp 1200w" sizes="(min-width: 1024px) 31vw, (min-width: 768px) 48vw, 100vw" width="1200" height="694" decoding="async" loading="lazy" style="object-position: 50% 50%"
                      alt="Reena Krishnaraja mit Mikrofon auf der Bühne">
                 <time class="fl-datebadge" datetime="2027-02-25">
                   <span class="fl-datebadge__wd">Do</span><span class="fl-datebadge__day">25</span><span class="fl-datebadge__mon">Feb</span>
@@ -136,7 +141,7 @@ Menschen.</p>
           <li>
             <article class="fl-event">
               <figure class="fl-event__media">
-                <img src="assets/img/events/card-babs.jpg" width="1200" height="800" loading="lazy"
+                <img src="assets/img/events/card-babs-600.webp" srcset="assets/img/events/card-babs-400.webp 400w, assets/img/events/card-babs-600.webp 600w, assets/img/events/card-babs-1200.webp 1200w" sizes="(min-width: 1024px) 31vw, (min-width: 768px) 48vw, 100vw" width="1200" height="800" decoding="async" loading="lazy"
                      alt="Babs Stehli als Rosmarie in der Dorfbeiz">
                 <time class="fl-datebadge" datetime="2027-04-08">
                   <span class="fl-datebadge__wd">Do</span><span class="fl-datebadge__day">08</span><span class="fl-datebadge__mon">Apr</span>
@@ -159,7 +164,7 @@ Menschen.</p>
           <li>
             <article class="fl-event">
               <figure class="fl-event__media">
-                <img src="assets/img/events/card-faehnlein.jpg" width="1200" height="900" loading="lazy" style="object-position: 50% 72%"
+                <img src="assets/img/events/card-faehnlein-600.webp" srcset="assets/img/events/card-faehnlein-400.webp 400w, assets/img/events/card-faehnlein-600.webp 600w, assets/img/events/card-faehnlein-1200.webp 1200w" sizes="(min-width: 1024px) 31vw, (min-width: 768px) 48vw, 100vw" width="1200" height="900" decoding="async" loading="lazy" style="object-position: 50% 72%"
                      alt="Produktionsmotiv mit Traktor und Schweizer Fahne">
                 <time class="fl-datebadge" datetime="2027-05-27">
                   <span class="fl-datebadge__wd">Do</span><span class="fl-datebadge__day">27</span><span class="fl-datebadge__mon">Mai</span>
@@ -273,7 +278,7 @@ Menschen.</p>
         </div>
         <div class="fl-about__visual-wrap">
           <figure class="m-0">
-            <img class="fl-about__img" src="assets/img/about-lindau.jpg" width="1200" height="800" loading="lazy"
+            <img class="fl-about__img" src="assets/img/about-lindau-700.webp" srcset="assets/img/about-lindau-700.webp 700w, assets/img/about-lindau-1400.webp 1400w" sizes="(min-width: 1024px) 37vw, 100vw" width="1400" height="933" decoding="async" loading="lazy"
                  alt="Luftbild von Lindau mit Kirche, Häusern und Wiesen">
           </figure>
           <div class="fl-about__aside">
@@ -282,7 +287,7 @@ Menschen.</p>
 in unserer
    Gemeinde.</p>
             <p class="fl-support">
-              <img src="assets/img/wappen-lindau.png" alt="Wappen der Gemeinde Lindau" width="64" height="75">
+              <img src="assets/img/wappen-lindau.webp" alt="Wappen der Gemeinde Lindau" width="64" height="75" loading="lazy" decoding="async">
               <span>Mit Unterstützung der Gemeinde Lindau.</span>
             </p>
           </div>
@@ -300,7 +305,7 @@ in unserer
         <ul class="fl-grid fl-grid--articles">
           <li>
             <article class="fl-article">
-              <figure class="fl-article__media"><img src="assets/img/article-kulturjahr.jpg" width="600" height="498" loading="lazy" alt="Besucherinnen und Besucher in einer Kunstausstellung"></figure>
+              <figure class="fl-article__media"><img src="assets/img/article-kulturjahr-300.webp" srcset="assets/img/article-kulturjahr-300.webp 300w, assets/img/article-kulturjahr-600.webp 600w" sizes="(min-width: 1280px) 15vw, (min-width: 1024px) 31vw, (min-width: 480px) 48vw, 100vw" width="600" height="498" decoding="async" loading="lazy" alt="Besucherinnen und Besucher in einer Kunstausstellung"></figure>
               <div class="fl-article__body">
                 <span class="fl-pill">Rückblicke</span>
                 <h3 class="fl-article__title"><a class="fl-stretched" href="einblicke/ein-vielfaeltiges-kulturjahr.html">Ein vielfältiges Kulturjahr</a></h3>
@@ -311,7 +316,7 @@ in unserer
           </li>
           <li>
             <article class="fl-article">
-              <figure class="fl-article__media"><img src="assets/img/article-engagement.jpg" width="600" height="564" loading="lazy" alt="Kinder malen gemeinsam an einem Tisch"></figure>
+              <figure class="fl-article__media"><img src="assets/img/article-engagement-300.webp" srcset="assets/img/article-engagement-300.webp 300w, assets/img/article-engagement-600.webp 600w" sizes="(min-width: 1280px) 15vw, (min-width: 1024px) 31vw, (min-width: 480px) 48vw, 100vw" width="600" height="564" decoding="async" loading="lazy" alt="Kinder malen gemeinsam an einem Tisch"></figure>
               <div class="fl-article__body">
                 <span class="fl-pill">Engagement</span>
                 <h3 class="fl-article__title"><a class="fl-stretched" href="einblicke/gemeinsam-etwas-bewegen.html">Gemeinsam etwas bewegen</a></h3>
@@ -322,7 +327,7 @@ in unserer
           </li>
           <li>
             <article class="fl-article">
-              <figure class="fl-article__media"><img src="assets/img/article-gespraech.jpg" width="600" height="529" loading="lazy" alt="Lächelnde Frau im Gespräch"></figure>
+              <figure class="fl-article__media"><img src="assets/img/article-gespraech-300.webp" srcset="assets/img/article-gespraech-300.webp 300w, assets/img/article-gespraech-600.webp 600w" sizes="(min-width: 1280px) 15vw, (min-width: 1024px) 31vw, (min-width: 480px) 48vw, 100vw" width="600" height="529" decoding="async" loading="lazy" alt="Lächelnde Frau im Gespräch"></figure>
               <div class="fl-article__body">
                 <span class="fl-pill">Im Gespräch</span>
                 <h3 class="fl-article__title"><a class="fl-stretched" href="einblicke/kultur-staerkt-unsere-gemeinde.html">«Kultur stärkt unsere Gemeinde»</a></h3>
@@ -370,7 +375,7 @@ in unserer
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/vendor/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

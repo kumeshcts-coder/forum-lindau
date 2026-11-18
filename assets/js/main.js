@@ -2,13 +2,16 @@
 (function () {
   'use strict';
 
-  // Header shadow once the page is scrolled
+  // Header shadow once the page is scrolled.
+  // IntersectionObserver on a 1px marker at the top of the page: no scroll
+  // listener and no forced layout during page load (better LCP / TBT).
   var header = document.querySelector('.fl-header');
-  var onScroll = function () {
-    header.classList.toggle('is-scrolled', window.scrollY > 4);
-  };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  var marker = document.querySelector('.fl-scroll-marker');
+  if (header && marker && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      header.classList.toggle('is-scrolled', !entries[0].isIntersecting);
+    }).observe(marker);
+  }
 
   // Keep aria-expanded on the menu button in sync (Bootstrap handles focus + Escape)
   var menu = document.getElementById('fl-menu');
