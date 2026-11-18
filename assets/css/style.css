@@ -101,7 +101,10 @@
 }
 
 /* ---------- Base ---------- */
-html { scroll-padding-top: var(--header-h); }
+html {
+  scroll-padding-top: var(--header-h);
+  overflow-x: clip; /* never scroll sideways (e.g. while web fonts load); clip keeps the sticky header working */
+}
 
 body {
   font-family: var(--ff-base);
@@ -524,6 +527,7 @@ img { max-width: 100%; height: auto; }
   color: var(--fl-grey);
 }
 .fl-about__img { display: block; width: 100%; aspect-ratio: 699 / 409; object-fit: cover; border-radius: var(--radius-lg); }
+.fl-about__visual-wrap > * { min-width: 0; }
 .fl-about__aside { display: flex; flex-direction: column; justify-content: space-between; gap: 24px; padding-bottom: clamp(0px, 1.77vw, 34px); }
 .fl-about__script {
   font-family: var(--ff-script);
