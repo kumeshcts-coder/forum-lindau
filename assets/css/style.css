@@ -20,7 +20,6 @@
   /* ---- Colours (Figma) ---- */
   --fl-green-brand: #009748;   /* logo green (Figma) – icons and decoration */
   --fl-green: #009748;         /* accessible text/button green: 5.2:1 on white (WCAG AA) */
-  --fl-green-dark: #00632f;
   --fl-green-tint: rgba(0, 151, 72, 0.1);
   --fl-heading: #243232;
   --fl-text: #373737;
@@ -128,7 +127,6 @@ body {
 h1, h2, h3, h4 { font-family: var(--ff-base); margin: 0; }
 p { margin: 0; }
 a { color: var(--fl-green); }
-a:hover { color: var(--fl-green-dark); }
 img { max-width: 100%; height: auto; }
 
 :focus-visible {
@@ -199,7 +197,7 @@ img { max-width: 100%; height: auto; }
 .fl-btn:hover .fl-arrow { transform: rotate(45deg) translate(2px, -2px); }
 
 .fl-btn--primary { background: var(--fl-green); border-color: var(--fl-white); color: var(--fl-white); }
-.fl-btn--primary:hover { background: var(--fl-green-dark); color: var(--fl-white); }
+.fl-btn--primary:hover { color: var(--fl-white); }
 
 .fl-btn--ghost { background: transparent; border-color: var(--fl-white); color: var(--fl-white); }
 .fl-btn--ghost:hover { background: rgba(255, 255, 255, 0.15); color: var(--fl-white); }
@@ -223,7 +221,7 @@ img { max-width: 100%; height: auto; }
   color: var(--fl-green);
   text-decoration: none;
 }
-.fl-link-arrow:hover { color: var(--fl-green-dark); }
+
 .fl-link-arrow:hover .fl-arrow { transform: rotate(45deg) translate(2px, -2px); }
 
 .fl-circle { flex: none; width: var(--circle); height: var(--circle); border-radius: 50%; transition: transform 0.2s ease, box-shadow 0.2s ease; }
