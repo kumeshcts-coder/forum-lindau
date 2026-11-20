@@ -6,7 +6,7 @@
 
 /* ---------- Phones: smaller logo and header ---------- */
 @media (max-width: 767.98px) {
-  :root { --logo-w: 84px; --header-h: 64px; }
+  :root { --logo-w: 84px; --header-h: 68px; }
 }
 
 /* ---------- Small phones ---------- */
