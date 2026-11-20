@@ -7,12 +7,18 @@
 /* ---------- Phones: smaller logo and header ---------- */
 @media (max-width: 767.98px) {
   :root { --logo-w: 84px; --header-h: 68px; }
+
+  /* Footer bottom bar: centred, legal links separated by "|" */
+  .fl-footer__bottom { flex-direction: column; justify-content: center; gap: 2px; text-align: center; }
+  .fl-footer__copy { justify-content: center; }
+  .fl-footer__legal { justify-content: center; gap: 0; }
+  .fl-footer__legal li { display: flex; align-items: center; }
+  .fl-footer__legal li + li::before { content: "|"; margin: 0 8px; color: var(--fl-p); }
 }
 
 /* ---------- Small phones ---------- */
 @media (max-width: 479px) {
   .fl-hero__actions .fl-btn { width: 100%; }
-  .fl-footer__legal { gap: 0 24px; }
 }
 
 /* ---------- Mobile: articles stack image on top ---------- */
