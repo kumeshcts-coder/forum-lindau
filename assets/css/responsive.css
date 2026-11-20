@@ -46,7 +46,6 @@
   .fl-hero__lead { max-width: none; margin-bottom: 0.63em; color: var(--fl-white); }
   .fl-hero__actions .fl-btn--ghost { border-color: var(--fl-white); color: var(--fl-white); }
   .fl-hero__actions .fl-btn--ghost .fl-arrow { filter: none; }
-  .fl-hero__actions .fl-btn--ghost:hover { background: rgba(255, 255, 255, 0.15); }
   .fl-hero__script {
     display: block;
     position: absolute;
