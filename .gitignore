@@ -1,1 +1,6 @@
 .claude/
+
+# Local secrets – never commit (FTP login lives in GitHub Secrets instead)
+ftp_details.txt
+*.env
+.env*
