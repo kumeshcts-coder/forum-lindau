@@ -278,9 +278,10 @@ img { max-width: 100%; height: auto; }
 .fl-burger {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  justify-content: flex-end;
+  min-width: var(--tap);
   min-height: var(--tap);
-  padding: 8px 0 8px 12px;
+  padding: 8px 0 8px 8px;
   border: 0;
   background: transparent;
   font-family: var(--ff-base);
@@ -312,9 +313,10 @@ img { max-width: 100%; height: auto; }
 .fl-menu__close {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  justify-content: flex-end;
+  min-width: var(--tap);
   min-height: var(--tap);
-  padding: 8px 0 8px 12px;
+  padding: 8px 0 8px 8px;
   border: 0;
   background: transparent;
   font-family: var(--ff-base);

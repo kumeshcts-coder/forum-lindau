@@ -4,6 +4,11 @@
    Breakpoints: 480 · 768 (tablet) · 1024 (desktop) · 1280 · 1920 (Figma)
    ========================================================================== */
 
+/* ---------- Phones: smaller logo and header ---------- */
+@media (max-width: 767.98px) {
+  :root { --logo-w: 84px; --header-h: 64px; }
+}
+
 /* ---------- Small phones ---------- */
 @media (max-width: 479px) {
   .fl-hero__actions .fl-btn { width: 100%; }
