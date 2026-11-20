@@ -1,13 +1,15 @@
 # Deploys the site to the FTP server (forum.entwicklung-loewenmut.ch)
 # every time code is pushed to the main branch.
 #
-# Required repository secrets (GitHub → Settings → Secrets and variables → Actions):
+# Settings → Secrets and variables → Actions → "Repository secrets":
+#   FTP_PASSWORD   – FTP password (must be a secret)
 #   FTP_SERVER     – FTP host name only, e.g. ftp.example.ch (no "ftp://")
 #   FTP_USERNAME   – FTP user
-#   FTP_PASSWORD   – FTP password
 # Optional:
 #   FTP_SERVER_DIR – folder on the server that holds index.html, ending with "/"
 #                    (e.g. "httpdocs/"). Defaults to the FTP login folder "./".
+# FTP_SERVER, FTP_USERNAME and FTP_SERVER_DIR may also be set as repository
+# *Variables* instead of secrets – both are accepted.
 
 name: Deploy to FTP
 
@@ -27,15 +29,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Upload to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
+          server: ${{ secrets.FTP_SERVER || vars.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME || vars.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: ${{ secrets.FTP_SERVER_DIR || './' }}
+          server-dir: ${{ secrets.FTP_SERVER_DIR || vars.FTP_SERVER_DIR || './' }}
           # Only changed files are uploaded (state is kept in .ftp-deploy-sync-state.json on the server)
           exclude: |
             **/.git*
