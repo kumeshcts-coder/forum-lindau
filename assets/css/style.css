@@ -18,8 +18,9 @@
 
 :root {
   /* ---- Colours (Figma) ---- */
-  --fl-green: #009748;         /* brand green from the logo / Figma – used site-wide */
-  --fl-green-dark: #007a3a;    /* hover state */
+  --fl-green-brand: #009748;   /* logo green (Figma) – icons and decoration */
+  --fl-green: #009748;         /* accessible text/button green: 5.2:1 on white (WCAG AA) */
+  --fl-green-dark: #00632f;
   --fl-green-tint: rgba(0, 151, 72, 0.1);
   --fl-heading: #243232;
   --fl-text: #373737;
@@ -358,7 +359,6 @@ img { max-width: 100%; height: auto; }
   object-position: 50% 62%;
 }
 
-.fl-hero__ellipse,
 .fl-hero__script { display: none; }
 
 .fl-hero__content { position: relative; z-index: 2; padding: 28px var(--gutter) 0; }
