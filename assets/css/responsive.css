@@ -26,6 +26,10 @@
   .fl-hero__media img { aspect-ratio: 4 / 3; object-position: 50% 58%; }
 
   .fl-about__visual-wrap { display: grid; grid-template-columns: minmax(0, 699fr) minmax(0, 321fr); gap: clamp(24px, 2.03vw, 39px); }
+  .fl-about__aside { margin-top: 0; }
+
+  /* Event cards side by side: reserve two title lines so the teasers line up */
+  .fl-event__title { min-height: calc(2em * 1.267); }
 
   .fl-footer__main { grid-template-columns: auto 1fr auto; gap: 48px; align-items: start; }
 }
